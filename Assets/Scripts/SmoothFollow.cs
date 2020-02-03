@@ -9,16 +9,18 @@ public class SmoothFollow : MonoBehaviour {
 	public Texture crossHair;
 
 	void Start() {
-		if (!target) return;
-		transform.position = target.position;
-		anim = target.GetComponent<Animator>();
-		isAiming = anim.GetBool("pedAiming");
+		//transform.position = target.position;
+		//anim = target.GetComponent<Animator>();
+		//isAiming = anim.GetBool("pedAiming");
 	}
 
 	float xRotation = 5.0f;
 	float yRotation = 5.0f;
 
 	void LateUpdate() {
+		if (!target) { return; }
+		transform.position = target.position;
+		anim = target.GetComponent<Animator>();
 		isAiming = anim.GetBool("pedAiming");
 		transform.position = target.position;
         	xRotation += Input.GetAxis("Mouse X");

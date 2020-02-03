@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
 public class Movements : MonoBehaviour {
 	private Animator anim;
@@ -28,6 +29,7 @@ public class Movements : MonoBehaviour {
 	}
 
 	public void jumpLanchEvent() {
+
 		resetTasks();
 		playerTask = "N/A";
 		prevPlayerTask = "N/A";
@@ -108,6 +110,7 @@ public class Movements : MonoBehaviour {
 	}
 
 	void Update() {
+		Camera.main.GetComponent<SmoothFollow>().target = transform;
 		RaycastHit hit;
 		resetTasks();
 		anim.SetBool(playerTask, true);
