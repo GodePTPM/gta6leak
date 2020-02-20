@@ -8,12 +8,6 @@ public class SmoothFollow : MonoBehaviour {
 	bool isAiming;
 	public Texture crossHair;
 
-	void Start() {
-		//transform.position = target.position;
-		//anim = target.GetComponent<Animator>();
-		//isAiming = anim.GetBool("pedAiming");
-	}
-
 	float xRotation = 5.0f;
 	float yRotation = 5.0f;
 

@@ -1,0 +1,176 @@
+fileFormatVersion: 2
+guid: 8edb1b44f0ff89f408a5aded1a1532c0
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Belly
+    100002: Bip01_Clavicle_L
+    100004: Bip01_Clavicle_R
+    100006: Breast_L
+    100008: Breast_R
+    100010: Brow_L
+    100012: Brow_R
+    100014: Calf_L
+    100016: Calf_R
+    100018: //RootNode
+    100020: Finger01_L
+    100022: Finger01_R
+    100024: Finger_L
+    100026: Finger_R
+    100028: Foot_L
+    100030: Foot_R
+    100032: ForeArm_L
+    100034: ForeArm_R
+    100036: Hand_L
+    100038: Hand_R
+    100040: Head
+    100042: Jaw
+    100044: maccer
+    100046: maccer_Armature
+    100048: Neck
+    100050: Pelvis
+    100052: Root
+    100054: Spine_1
+    100056: Spine_2
+    100058: Thigh_L
+    100060: Thigh_R
+    100062: Toe0_L
+    100064: Toe0_R
+    100066: UpperArm_L
+    100068: UpperArm_R
+    100070: player
+    100072: player_Armature
+    400000: Belly
+    400002: Bip01_Clavicle_L
+    400004: Bip01_Clavicle_R
+    400006: Breast_L
+    400008: Breast_R
+    400010: Brow_L
+    400012: Brow_R
+    400014: Calf_L
+    400016: Calf_R
+    400018: //RootNode
+    400020: Finger01_L
+    400022: Finger01_R
+    400024: Finger_L
+    400026: Finger_R
+    400028: Foot_L
+    400030: Foot_R
+    400032: ForeArm_L
+    400034: ForeArm_R
+    400036: Hand_L
+    400038: Hand_R
+    400040: Head
+    400042: Jaw
+    400044: maccer
+    400046: maccer_Armature
+    400048: Neck
+    400050: Pelvis
+    400052: Root
+    400054: Spine_1
+    400056: Spine_2
+    400058: Thigh_L
+    400060: Thigh_R
+    400062: Toe0_L
+    400064: Toe0_R
+    400066: UpperArm_L
+    400068: UpperArm_R
+    400070: player
+    400072: player_Armature
+    2100000: Mat_maccer__maccer_bmp
+    2100002: Mat_player__swat_bmp
+    4300000: maccer
+    4300002: player
+    7400000: Default Take
+    7400002: maccer_Armature
+    7400004: player_Armature
+    9500000: //RootNode
+    11100000: //RootNode
+    13700000: maccer
+    13700002: player
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

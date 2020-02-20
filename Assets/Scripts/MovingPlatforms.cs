@@ -19,7 +19,7 @@ public class MovingPlatforms : MonoBehaviour {
 		InvokeRepeating("changeTargetName", 7, 10);
 	}
 
-	void FixedUpdate() {
+	void Update() {
 		Vector3 targetPos = transform.position;
 		if (targetName == "up") {
 			targetPos.y += 1f;

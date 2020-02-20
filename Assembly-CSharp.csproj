@@ -53,7 +53,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\Hud.cs" />
      <Compile Include="Assets\Scripts\ModelsLoading.cs" />
      <Compile Include="Assets\Scripts\Movements.cs" />
      <Compile Include="Assets\Scripts\MovingPlatforms.cs" />
