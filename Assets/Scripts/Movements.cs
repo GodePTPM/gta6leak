@@ -25,6 +25,10 @@ public class Movements : MonoBehaviour {
 		anim.SetBool("IDLE", false);
 		anim.SetBool("SPRINT", false);
 		anim.SetBool("RUN", false);
+
+		anim.SetFloat("HorizontalAxis", 0.0F);
+		anim.SetFloat("VerticalAxis", 0.0F);
+
 		anim.SetBool("N/A", false);
 	}
 
@@ -44,11 +48,11 @@ public class Movements : MonoBehaviour {
 		if (characterController.isGrounded) {
 			moveDirection = new Vector3(0,0,0);
 			if  (Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0) {
+				anim.SetFloat("HorizontalAxis", Input.GetAxisRaw("Horizontal"));
+				anim.SetFloat("VerticalAxis", Input.GetAxisRaw("Vertical"));
 				var targetMove = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
-				moveDirection = camTransform.TransformDirection(targetMove);
+				moveDirection = transform.TransformDirection(targetMove);
 				var targetRotation = Quaternion.LookRotation(moveDirection,Vector3.up);
-				float angle = Mathf.LerpAngle(transform.eulerAngles.y, camTransform.eulerAngles.y, 0.3f);
-				transform.eulerAngles = new Vector3(0,angle,0);
 			} else {
 				playerTask = "IDLE";
 			}
