@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class Movements : MonoBehaviour {
 	private Animator anim;
-	public float playerSpeed = 10f;
-	public float gravity = 20f;
+	private float originalPlayerSpeed = 20f;
+	private float playerSpeed = 0.0f;
+	private float gravity = 250f;
+
 	CharacterController characterController;
-	float newPlayerSpeed;
 	string playerTask = "N/A";
 
 	void Start() {
@@ -15,6 +16,12 @@ public class Movements : MonoBehaviour {
 		Cursor.lockState = CursorLockMode.Locked;
 		Cursor.visible = false;
 		anim = gameObject.GetComponent<Animator>();
+
+
+		// var player_clavicleL = transform.Find("Game_engine").Find("Root").Find("pelvis").Find("spine_01").Find("spine_02").Find("spine_03").Find("clavicle_l");
+		// mp5Object = (GameObject)Instantiate(mp5Prefab, player_clavicleL.transform.position, Quaternion.identity);
+		// mp5Object.transform.parent = player_clavicleL;
+		// mp5Object.transform.localPosition = new Vector3(-0.14f, 0.01f, 0.38f);
 	}
 
 	void OnGUI() {
@@ -23,8 +30,9 @@ public class Movements : MonoBehaviour {
 
 	void resetTasks() {
 		anim.SetBool("IDLE", false);
-		anim.SetBool("SPRINT", false);
+		anim.SetBool("WALK", false);
 		anim.SetBool("RUN", false);
+		anim.SetBool("JUMP", false);
 
 		anim.SetFloat("HorizontalAxis", 0.0F);
 		anim.SetFloat("VerticalAxis", 0.0F);
@@ -43,6 +51,12 @@ public class Movements : MonoBehaviour {
 			return;
 		}
 
+		if (Input.GetMouseButton(0)) {
+			anim.SetLayerWeight(2, 1);
+		} else {
+			anim.SetLayerWeight(2, 0);
+		}
+
 		Vector3 moveDirection = characterController.velocity;
 		var camTransform = Camera.main.transform;
 		if (characterController.isGrounded) {
@@ -55,11 +69,24 @@ public class Movements : MonoBehaviour {
 				var targetRotation = Quaternion.LookRotation(moveDirection,Vector3.up);
 			} else {
 				playerTask = "IDLE";
+				playerSpeed = 0.0f;
 			}
 			if (playerTask != "IDLE") {
 				moveDirection.y = 0.0f;
 				moveDirection = moveDirection.normalized*playerSpeed;
-				playerTask = "RUN";
+				
+				playerSpeed = Mathf.Lerp(playerSpeed, originalPlayerSpeed, 0.05f);
+				if (Input.GetKey(KeyCode.Space)) {
+					playerTask = "RUN";
+					originalPlayerSpeed = 50f;
+				} else {
+					playerTask = "WALK";
+					originalPlayerSpeed = 20f;
+				}
+			}
+			if (Input.GetKeyDown(KeyCode.LeftShift)) {
+				moveDirection.y += 70;
+				playerTask = "JUMP";
 			}
 		}
 		moveDirection.y -= gravity * Time.deltaTime;

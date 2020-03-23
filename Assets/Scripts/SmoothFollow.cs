@@ -3,7 +3,7 @@ using System.Collections;
 
 public class SmoothFollow : MonoBehaviour {
 	public Transform target;
-	public float distance = 6.0f;
+	private float distance = 15.0f;
 
 	float xRotation = 0.0f;
 	float yRotation = 0.0f;
@@ -39,7 +39,7 @@ public class SmoothFollow : MonoBehaviour {
 		float angle = Mathf.LerpAngle(target.eulerAngles.y, transform.eulerAngles.y, 0.3f);
 
 		var player_spine = target.Find("Game_engine").Find("Root").Find("pelvis").Find("spine_01").Find("spine_02");
-		player_spine.eulerAngles = new Vector3(transform.eulerAngles.x,transform.eulerAngles.y+10,0);
+		player_spine.eulerAngles = new Vector3(transform.eulerAngles.x,transform.eulerAngles.y+20,0);
 
 		target.eulerAngles = new Vector3(0,angle,0);
 	}
